@@ -1,7 +1,7 @@
 <view class="w-100vw flex flex-col items-center" bindtap="test">
-  <svg-icon name="feat" width="100vw" height="100vw"></svg-icon>
-  <svg-icon name="line-md:github-loop" width="50vw" height="50vw"></svg-icon>
+  <svg-icon name="map" width="100vw" height="100vw"></svg-icon>
 </view>
+<h1>home</h1>
 <view class="text-50rpx text-center">Page 中：</view>
 <view class="intro">{{global.numA}} + {{global.numB}} = {{global.sum}}</view>
 <view class="intro">

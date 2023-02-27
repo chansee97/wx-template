@@ -1,7 +1,7 @@
 import { defaultRequest } from '../utils/index'
 
 export async function testApi() {
-  return await defaultRequest({
+  return await defaultRequest.put({
     url: '/test',
   })
 }

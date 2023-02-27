@@ -1,14 +1,34 @@
 {
-  "pages": ["pages/index/index"],
+  "pages": ["pages/index/index", "pages/home/index"],
+  "entryPagePath": "pages/home/index",
   "subpackages": [
     {
       "root": "packages",
       "pages": ["logs/logs"]
     }
   ],
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "组件"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "text": "接口"
+      }
+    ]
+  },
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "svg-icon": "./components/svg-icon/index"
+    "svg-icon": "./components/svg-icon/index",
+    "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
+    "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
+    "t-badge": "tdesign-miniprogram/badge/badge"
   },
   "window": {
     "backgroundTextStyle": "light",
