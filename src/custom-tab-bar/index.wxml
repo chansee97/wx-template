@@ -1,5 +1,5 @@
 <view class="tab-bar">
-  <t-tab-bar value="{{value}}" bindchange="onChange" theme="tag" split="{{false}}">
-    <t-tab-bar-item wx:for="{{list}}" badge-props="{{ item.badge }}" wx:key="index" value="{{item.value}}" icon="{{item.icon}}"> {{item.label}} </t-tab-bar-item>
+  <t-tab-bar value="{{activeIndex}}" bindchange="onChange" theme="tag" split="{{false}}">
+    <t-tab-bar-item wx:for="{{list}}" badge-props="{{ item.badge }}" wx:key="index" value="{{index}}" icon="{{item.icon}}"> {{item.text}} </t-tab-bar-item>
   </t-tab-bar>
 </view>

@@ -1,19 +1,30 @@
 Component({
   data: {
-    value: '/pages/home/index',
+    activeIndex: 0,
     list: [
-      { value: '/pages/home/index', label: '首页', icon: 'home', badge: { count: 16 } },
-      // { value: 'pages/home/index', label: '应用', icon: 'app', badge: { dot: true } },
-      { value: '/pages/index/index', label: '我的', icon: 'user', badge: { count: '···' } },
+      {
+        pagePath: '/pages/index/index',
+        text: '首页',
+        icon: 'home',
+        badge: {},
+      },
+      {
+        pagePath: '/pages/user/index',
+        text: '我的',
+        icon: 'user',
+        badge: {},
+      },
     ],
   },
 
   methods: {
     onChange(e: WechatMiniprogram.CustomEvent) {
+      const activeIndex = e.detail.value
       this.setData({
-        value: e.detail.value,
+        activeIndex,
       })
-      wx.switchTab({ url: e.detail.value })
+      const path = this.data.list[activeIndex].pagePath
+      wx.switchTab({ url: path })
     },
   },
 })

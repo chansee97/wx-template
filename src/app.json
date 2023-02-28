@@ -1,6 +1,6 @@
 {
-  "pages": ["pages/index/index", "pages/home/index"],
-  "entryPagePath": "pages/home/index",
+  "pages": ["pages/index/index", "pages/user/index"],
+  "entryPagePath": "pages/index/index",
   "subpackages": [
     {
       "root": "packages",
@@ -15,11 +15,11 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "组件"
+        "text": "首页"
       },
       {
-        "pagePath": "pages/home/index",
-        "text": "接口"
+        "pagePath": "pages/user/index",
+        "text": "我的"
       }
     ]
   },
@@ -28,7 +28,9 @@
     "svg-icon": "./components/svg-icon/index",
     "t-tab-bar": "tdesign-miniprogram/tab-bar/tab-bar",
     "t-tab-bar-item": "tdesign-miniprogram/tab-bar-item/tab-bar-item",
-    "t-badge": "tdesign-miniprogram/badge/badge"
+    "t-badge": "tdesign-miniprogram/badge/badge",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-fab": "tdesign-miniprogram/fab/fab"
   },
   "window": {
     "backgroundTextStyle": "light",

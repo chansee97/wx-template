@@ -1,17 +1,12 @@
 import https from 'https'
 import fs from 'fs'
+import { resolve } from 'path'
 type jsonDefine = {
   iconList: string[]
 }
-let fromPath = '../src/assets/iconify.json' // json读取位置
-let distPath = './src/assets/iconify.ts' // 文件写入路径
-process.argv.forEach((argv) => {
-  if (argv.split('=')[0] === 'path') {
-    distPath = argv.split('=')[1]
-  } else if (argv.split('=')[0] === 'json') {
-    fromPath = argv.split('=')[1]
-  }
-})
+const rootPath: string = resolve(process.cwd())
+const fromPath = `${rootPath}/iconify.json`
+const distPath = `${rootPath}/src/assets/svg/iconify.ts`
 
 const json = require(fromPath) as jsonDefine
 

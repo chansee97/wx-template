@@ -9,6 +9,13 @@ export function delay(ms: number) {
   })
 }
 
+export function setActiveTab(_this: AnyObject, index: number) {
+  if (typeof _this.getTabBar === 'function' && _this.getTabBar()) {
+    _this.getTabBar().setData({
+      activeIndex: index,
+    })
+  }
+}
 export function setNavigationBarHeight() {
   const { statusBarHeight, platform } = wx.getSystemInfoSync()
   const { top, height } = wx.getMenuButtonBoundingClientRect()

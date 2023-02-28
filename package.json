@@ -13,7 +13,7 @@
     "lint": "eslint . --ext .js,.ts,.wxml --fix",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "format": "prettier --write ./**/*.{js,ts,wxs,wxml,wxss,json}",
-    "getIconify": "esno build/getIconify json=./iconify.json path=./src/assets/svg/iconify.ts"
+    "getIconify": "esno build/getIconify"
   },
   "dependencies": {
     "@vant/weapp": "^1.10.14",
@@ -34,6 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.53.0",
     "@unocss/cli": "^0.50.1",
+    "@wxml/parser": "^0.4.0",
     "eslint": "^8.35.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
